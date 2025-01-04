@@ -4,10 +4,12 @@ import store from './store'
 import { routeInterceptor, requestInterceptor, prototypeInterceptor } from './interceptors'
 import 'virtual:uno.css'
 import '@/style/index.scss'
+import { apolloClient } from './graphql/setup'
 
 export function createApp() {
   const app = createSSRApp(App)
   app.use(store)
+  app.use(apolloClient)
   app.use(routeInterceptor)
   app.use(requestInterceptor)
   app.use(prototypeInterceptor)

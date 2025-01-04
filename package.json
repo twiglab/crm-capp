@@ -102,9 +102,12 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4020920240930001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4020920240930001",
     "dayjs": "1.11.10",
+    "graphql": "^16.10.0",
+    "graphql-tag": "^2.12.6",
     "pinia": "2.0.36",
     "pinia-plugin-persistedstate": "3.2.1",
     "qs": "6.5.3",
+    "villus": "^3.5.1",
     "vue": "3.4.21",
     "wot-design-uni": "^1.4.0",
     "z-paging": "^2.8.4"

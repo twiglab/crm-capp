@@ -30,9 +30,17 @@
   </view>
 </template>
 
-<script lang="ts" setup>
+<script lang="js" setup>
 import PLATFORM from '@/utils/platform'
+import { computed } from 'vue'
+import { useQuery } from 'villus'
+import GQL from '@/graphql'
 
+const { data, execute } = useQuery({ query: GQL.user.Login })
+console.log('data', data)
+console.log('execute', execute)
+const count = computed(() => data.value?.me.countAsFriend ?? '--')
+console.log('count', count)
 defineOptions({
   name: 'Home',
 })

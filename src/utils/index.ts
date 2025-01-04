@@ -134,13 +134,13 @@ export const getEnvBaseUrl = () => {
 
     switch (envVersion) {
       case 'develop':
-        baseUrl = 'https://ukw0y1.laf.run'
+        baseUrl = 'http://it9i.com:10007'
         break
       case 'trial':
-        baseUrl = 'https://ukw0y1.laf.run'
+        baseUrl = 'http://it9i.com:10007'
         break
       case 'release':
-        baseUrl = 'https://ukw0y1.laf.run'
+        baseUrl = 'http://it9i.com:10007'
         break
     }
   }

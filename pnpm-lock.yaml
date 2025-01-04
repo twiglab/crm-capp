@@ -59,6 +59,12 @@ importers:
       dayjs:
         specifier: 1.11.10
         version: 1.11.10
+      graphql:
+        specifier: ^16.10.0
+        version: 16.10.0
+      graphql-tag:
+        specifier: ^2.12.6
+        version: 2.12.6(graphql@16.10.0)
       pinia:
         specifier: 2.0.36
         version: 2.0.36(typescript@5.7.2)(vue@3.4.21(typescript@5.7.2))
@@ -68,6 +74,9 @@ importers:
       qs:
         specifier: 6.5.3
         version: 6.5.3
+      villus:
+        specifier: ^3.5.1
+        version: 3.5.1(graphql@16.10.0)(vue@3.4.21(typescript@5.7.2))
       vue:
         specifier: 3.4.21
         version: 3.4.21(typescript@5.7.2)
@@ -3284,6 +3293,16 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
+  graphql-tag@2.12.6:
+    resolution: {integrity: sha512-FdSNcu2QQcWnM2VNvSCCDCVS5PpPqpzgFT8+GXzqJuoDd0CBncxCY278u4mhRO7tMgo2JjgJA5aZ+nWSQ/Z+xg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+
+  graphql@16.10.0:
+    resolution: {integrity: sha512-AjqGKbDGUFRKIRCP9tCKiIGHyriz2oHEbPIbEtcSLSs4YjReZOIPQQWek4+6hjw62H9QShXHyaGivGiYVLeYFQ==}
+    engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
+
   gzip-size@6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
     engines: {node: '>=10'}
@@ -5322,6 +5341,12 @@ packages:
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+
+  villus@3.5.1:
+    resolution: {integrity: sha512-vE9B9IImsqkVU/reSiPgRO8p4aC5Z/rb2UjLjRJBP0zBeyHtid84ewH0/NAw02OIFyFCJh+i/1C5oXuLfggPQQ==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      vue: ^3.0.0 || ^2.7.0
 
   vite-plugin-restart@0.4.2:
     resolution: {integrity: sha512-9aWN2ScJ8hbT7aC8SDeZnsbWapnslz1vhNq6Vgf2GU9WdN4NExlrWhtnu7pmtOUG3Guj8y6lPcUZ+ls7SVP33w==}
@@ -9799,6 +9824,13 @@ snapshots:
 
   graphemer@1.4.0: {}
 
+  graphql-tag@2.12.6(graphql@16.10.0):
+    dependencies:
+      graphql: 16.10.0
+      tslib: 2.8.1
+
+  graphql@16.10.0: {}
+
   gzip-size@6.0.0:
     dependencies:
       duplexer: 0.1.2
@@ -12096,6 +12128,11 @@ snapshots:
       spdx-expression-parse: 3.0.1
 
   vary@1.1.2: {}
+
+  villus@3.5.1(graphql@16.10.0)(vue@3.4.21(typescript@5.7.2)):
+    dependencies:
+      graphql: 16.10.0
+      vue: 3.4.21(typescript@5.7.2)
 
   vite-plugin-restart@0.4.2(vite@5.2.8(@types/node@20.17.9)(sass@1.77.8)(terser@5.36.0)):
     dependencies:
