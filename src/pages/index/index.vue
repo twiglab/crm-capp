@@ -32,15 +32,27 @@
 
 <script lang="js" setup>
 import PLATFORM from '@/utils/platform'
-import { computed } from 'vue'
 import { useQuery } from 'villus'
-import GQL from '@/graphql'
+import { loginGQL } from '@/graphql/user.graphql'
 
-const { data, execute } = useQuery({ query: GQL.user.Login })
-console.log('data', data)
-console.log('execute', execute)
-const count = computed(() => data.value?.me.countAsFriend ?? '--')
-console.log('count', count)
+onShow(async () => {
+  const { error, data } = await login()
+  console.log('err', error)
+  console.log('data', data)
+})
+const {
+  data,
+  execute: login,
+  error,
+} = useQuery({
+  query: loginGQL,
+  variables: {
+    input: {
+      jsCode: '0000000000',
+    },
+  },
+})
+
 defineOptions({
   name: 'Home',
 })

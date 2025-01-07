@@ -11,8 +11,8 @@ const fetchPlugin = fetch({
         method: options?.method as Methods,
         data: options?.body as any,
         header: options?.headers,
-
         success(res) {
+          console.log('resd', res)
           resolve({
             ok: true,
             status: res.statusCode,
@@ -30,6 +30,6 @@ const fetchPlugin = fetch({
 })
 
 export const apolloClient = createClient({
-  url: 'http://it9i.com:10007/gql',
+  url: 'http://it9i.com:10007/gql/query',
   use: [fetchPlugin],
 })

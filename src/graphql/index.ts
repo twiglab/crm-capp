@@ -1,9 +1,8 @@
-import * as user from './graphql-user'
+import * as user from './user.graphql'
 // ...
 
 /* how to use
 import GQL from "@/graphql"
-const curGQL = GQL.home.listAsOwner
 **/
 export default {
   user,
