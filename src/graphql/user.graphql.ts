@@ -5,19 +5,26 @@ export const loginGQL = gql`
     Login(input: $input) {
       code
       jwt
+      level
+      status
     }
   }
 `
-
-export const listAsOwnerGQL = gql`
-  query listAsOwner($questionnaireId: String!) {
-    listAsOwner(questionnaireId: $questionnaireId) {
-      friend {
+export const loginAndAutoSignUpGQL = gql`
+  mutation loginAndAutoSignUp($data: LoginAndAutoSignUpInput!) {
+    loginAndAutoSignUp(data: $data) {
+      accessToken
+      refreshToken
+      user {
         id
-        nickName
+        openId
+        createdAt
         avatarUrl
+        nickName
+        gender
+        province
+        birthday
       }
-      visualization
     }
   }
 `

@@ -34,6 +34,7 @@
 import PLATFORM from '@/utils/platform'
 import { useQuery } from 'villus'
 import { loginGQL } from '@/graphql/user.graphql'
+import { uniLogin } from '@/apis/uni.api'
 
 onShow(async () => {
   const { error, data } = await login()
@@ -52,6 +53,10 @@ const {
     },
   },
 })
+
+async function wxLogin() {
+  const { code } = await uniLogin('weixin')
+}
 
 defineOptions({
   name: 'Home',
